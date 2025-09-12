@@ -1,0 +1,27 @@
+meta {
+  name: Obtener Datos Usuario por Email
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url_backend}}/api/v1/users/getByEmailUser?email=shadow
+  body: none
+  auth: bearer
+}
+
+params:query {
+  email: shadow
+}
+
+headers {
+  x-companycode: 296e54ae-702d-4fdd-9712-e6a60db86f93
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+}

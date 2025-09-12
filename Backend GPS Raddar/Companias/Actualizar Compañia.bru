@@ -1,0 +1,32 @@
+meta {
+  name: Actualizar Compañia
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{url_backend}}/api/v1/company/updateCompany?uuid=4354e109-683d-425f-9a24-1f1a1a34126d
+  body: json
+  auth: bearer
+}
+
+params:query {
+  uuid: 4354e109-683d-425f-9a24-1f1a1a34126d
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:json {
+  {
+    "ruc": "9876543210",
+    "name_company": "YouTrack",
+    "address_company": "Cdla Camilo Ponce",
+    "contact_company": "2800-1313"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

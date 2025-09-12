@@ -1,0 +1,27 @@
+meta {
+  name: Obtener Roles por Id
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{url_backend}}/api/v1/rol/getByIdRol?id=68c1eb8c695cfbf8143b8e0f
+  body: none
+  auth: bearer
+}
+
+params:query {
+  id: 68c1eb8c695cfbf8143b8e0f
+}
+
+headers {
+  x-companycode: e075723a-99fe-43c8-ae2a-5008b04e97fe
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+}

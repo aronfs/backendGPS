@@ -1,0 +1,28 @@
+meta {
+  name: Crear Rol
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url_backend}}/api/v1/rol/createRol
+  body: formUrlEncoded
+  auth: bearer
+}
+
+headers {
+  x-companycode: e075723a-99fe-43c8-ae2a-5008b04e97fe
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:form-urlencoded {
+  nombre_rol: Administradores
+  descripcion_rol: Es el rol para admnistradores con funcionalidades casi super adminitrador
+}
+
+settings {
+  encodeUrl: true
+}

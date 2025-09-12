@@ -1,0 +1,26 @@
+meta {
+  name: Crear Compañia
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url_backend}}/api/v1/company/createCompany
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:form-urlencoded {
+  ruc: 1234567890
+  name_company: Raddar
+  address_company: Cdla Camilo Ponce y Calle Jorge Carrera Andrade
+  contact_company: 2888-2323
+}
+
+settings {
+  encodeUrl: true
+}

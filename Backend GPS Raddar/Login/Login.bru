@@ -1,0 +1,28 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url_backend}}/api/v1/accounts/login
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  email: johnviracocha7@gmail.com
+  password: Soff.com1999
+}
+
+vars:post-response {
+  token: 
+}
+
+script:post-response {
+  bru.setVar("token", res.body.data.token);
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,32 @@
+meta {
+  name: Actualizar Usuario
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{url_backend}}/api/v1/users/updateEmailUser?email=johnjairo7@gmail.com
+  body: json
+  auth: bearer
+}
+
+params:query {
+  email: johnjairo7@gmail.com
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:json {
+  {
+    "name": "johnActualizado",
+    "last_name": "jairoActualizado",
+    "email": "johnjairo7@gmail.com",
+    "phone": 998050443
+  }
+}
+
+settings {
+  encodeUrl: true
+}

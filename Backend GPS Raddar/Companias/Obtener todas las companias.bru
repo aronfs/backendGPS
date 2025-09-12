@@ -1,0 +1,19 @@
+meta {
+  name: Obtener todas las companias
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url_backend}}/api/v1/company/getAllCompany
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

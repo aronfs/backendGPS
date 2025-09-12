@@ -1,0 +1,22 @@
+meta {
+  name: Crear Cuenta
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url_backend}}/api/v1/accounts/register
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  email: johnviracocha7@gmail.com
+  password: Soff.com1999
+  rol: Colaborador
+  code: 4354e109-683d-425f-9a24-1f1a1a34126d
+}
+
+settings {
+  encodeUrl: true
+}

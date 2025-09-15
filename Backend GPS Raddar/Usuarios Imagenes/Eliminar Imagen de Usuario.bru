@@ -1,0 +1,19 @@
+meta {
+  name: Eliminar Imagen de Usuario
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{url_backend}}/api/v1/userImage/deleteByIdUserImage
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

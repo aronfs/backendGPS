@@ -1,0 +1,31 @@
+meta {
+  name: Registrar Imagen de Usuario
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url_backend}}/api/v1/userImage/registerUserImage?email=motavalomarin@gmail.com
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  email: motavalomarin@gmail.com
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:form-urlencoded {
+  : 
+}
+
+body:multipart-form {
+  file: @file(/home/aaronviracocha/Imágenes/Capturas de pantalla/Avatar2.png)
+}
+
+settings {
+  encodeUrl: true
+}

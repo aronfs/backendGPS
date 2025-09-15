@@ -1,0 +1,23 @@
+meta {
+  name: Inactivar Dispositivo
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{url_backend}}/api/v1/device/inactiveDevice?id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  id: 
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

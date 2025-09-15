@@ -1,0 +1,23 @@
+meta {
+  name: Obtener Ultima Posicion
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{url_backend}}/api/v1/positions/getLastesPosition?id=28
+  body: none
+  auth: bearer
+}
+
+params:query {
+  id: 28
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

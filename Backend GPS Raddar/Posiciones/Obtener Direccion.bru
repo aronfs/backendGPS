@@ -1,0 +1,23 @@
+meta {
+  name: Obtener Direccion
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{url_backend}}/api/v1/positions/getAddress?id=24
+  body: none
+  auth: bearer
+}
+
+params:query {
+  id: 24
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

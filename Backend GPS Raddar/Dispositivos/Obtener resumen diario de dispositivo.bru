@@ -1,0 +1,23 @@
+meta {
+  name: Obtener resumen diario de dispositivo
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url_backend}}/api/v1/device/getSummmaryDateNow?deviceId=19
+  body: none
+  auth: bearer
+}
+
+params:query {
+  deviceId: 19
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

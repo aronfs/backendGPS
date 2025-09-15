@@ -1,0 +1,35 @@
+meta {
+  name: Registrar un Dispositivo
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url_backend}}/api/v1/device/registerDevice
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:json {
+  {
+    "name_model": "",
+    "serial_model": "",
+    "status_model": "",
+    "contact_model": "",
+    "category_model": "",
+    "attributes": [
+      {
+        "deviceImage": "",
+        "brand_label": ""
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

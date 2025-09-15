@@ -1,0 +1,27 @@
+meta {
+  name: Actualizar Imagen de Usuario
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{url_backend}}/api/v1/userImage/updateByIdImage
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  : 
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:multipart-form {
+  file: @file(/home/aaronviracocha/Imágenes/Capturas de pantalla/Avatar2.png)
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Obtener Recordatorio por Nombre
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url_backend}}/api/v1/evento/getByNameEvento?name_evento=soy el recordatorio
+  body: none
+  auth: bearer
+}
+
+params:query {
+  name_evento: soy el recordatorio
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

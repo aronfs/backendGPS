@@ -1,0 +1,25 @@
+meta {
+  name: Obtener Ultima Fecha de Informacion de la Posicion
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{url_backend}}/api/v1/positions/getLastesDateInformationPosition?id=28&startDate=2025-08-01&endDate=2025-08-31
+  body: none
+  auth: bearer
+}
+
+params:query {
+  id: 28
+  startDate: 2025-08-01
+  endDate: 2025-08-31
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

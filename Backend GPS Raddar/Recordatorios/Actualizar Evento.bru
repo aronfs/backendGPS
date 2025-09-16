@@ -1,0 +1,28 @@
+meta {
+  name: Actualizar Evento
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{url_backend}}/api/v1/reportes/updateByIdEvento?id
+  body: json
+  auth: inherit
+}
+
+params:query {
+  id: 
+}
+
+body:json {
+  {
+    "name_evento": "soy el recordatorio",
+    "description_evento": "yo soy la descripcion",
+    "startDate": "2025-09-25",
+    "endDate": "2025-09-26"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

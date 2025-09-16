@@ -1,0 +1,19 @@
+meta {
+  name: Inactivar Evento
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{url_backend}}/api/v1/evento/inactiveEvento?id
+  body: none
+  auth: inherit
+}
+
+params:query {
+  id: 
+}
+
+settings {
+  encodeUrl: true
+}

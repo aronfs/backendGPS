@@ -1,0 +1,26 @@
+meta {
+  name: Generar Reporte PDF Seleccion
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{url_backend}}/api/v1/reportes/generateReportPDFSelection?id=28&startDate=2025-05-02&endDate=2025-05-02&typeOfReport=Recorridos
+  body: none
+  auth: bearer
+}
+
+params:query {
+  id: 28
+  startDate: 2025-05-02
+  endDate: 2025-05-02
+  typeOfReport: Recorridos
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,29 @@
+meta {
+  name: Actualizar Rol de Cuenta
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{url_backend}}api/v1/accounts/updateRolUser
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:json {
+  
+    {
+    "email": "mateosalazar7@gmail.com",
+    "rol": "Super-Admin" //Roles Disponibles en el Endpoint de Roles para Colaboradores y Administradores
+    
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

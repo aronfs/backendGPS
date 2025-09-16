@@ -1,17 +1,18 @@
 meta {
-  name: Obtener usuario por Email
+  name: Obtener Usuarios Paginado
   type: http
-  seq: 4
+  seq: 3
 }
 
 get {
-  url: {{url_backend}}/api/v1/users/getByEmailUser?email=shadow
+  url: {{url_backend}}api/v1/users/getUserPaginated?page=1&limit=1
   body: none
   auth: bearer
 }
 
 params:query {
-  email: shadow
+  page: 1
+  limit: 1
 }
 
 auth:bearer {

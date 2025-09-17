@@ -1,0 +1,27 @@
+meta {
+  name: Crear Usuario V2
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{url_backend}}api/v1/users/createUserWithImage
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  x-companycode: Automatic
+}
+
+body:multipart-form {
+  name: John
+  last_name: viracocha
+  email: johnviracocha98213122212@gmail.com
+  phone: 998056789
+  ~file: @file(/home/aaronviracocha/Imágenes/Capturas de pantalla/Avatar2.png)
+}
+
+settings {
+  encodeUrl: true
+}

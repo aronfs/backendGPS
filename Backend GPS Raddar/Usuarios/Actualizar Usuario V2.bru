@@ -1,0 +1,31 @@
+meta {
+  name: Actualizar Usuario V2
+  type: http
+  seq: 10
+}
+
+put {
+  url: {{url_backend}}api/v1/users/updateEmailUserWithImage?email=johnviracocha98213122212@gmail.com
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  email: johnviracocha98213122212@gmail.com
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:multipart-form {
+  name: JOHN
+  last_name: VIRACOCHA
+  email: johnviracocha98213122212@gmail.com
+  phone: 9980765432
+  file: @file(/home/aaronviracocha/Imágenes/Capturas de pantalla/avatar1.png)
+}
+
+settings {
+  encodeUrl: true
+}

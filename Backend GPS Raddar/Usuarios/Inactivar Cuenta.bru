@@ -5,9 +5,17 @@ meta {
 }
 
 patch {
-  url: {{url_backend
+  url: {{url_backend}}api/v1/accounts/inactiveAccount?email=aronviracocha7@gmail.com
   body: none
-  auth: inherit
+  auth: bearer
+}
+
+params:query {
+  email: aronviracocha7@gmail.com
+}
+
+auth:bearer {
+  token: {{Authorization}}
 }
 
 settings {

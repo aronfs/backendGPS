@@ -1,0 +1,23 @@
+meta {
+  name: Obtener Resumen de Usuario
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{url_backend}}api/v1/accounts/getDashboardAccount?email=mateosalazar7@gmail.com
+  body: none
+  auth: bearer
+}
+
+params:query {
+  email: mateosalazar7@gmail.com
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

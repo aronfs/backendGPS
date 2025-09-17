@@ -1,0 +1,23 @@
+meta {
+  name: Obtener Menu Rol
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url_backend}}api/v1/menu/getMenuRol?rol=Super-Admin
+  body: none
+  auth: bearer
+}
+
+params:query {
+  rol: Super-Admin
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

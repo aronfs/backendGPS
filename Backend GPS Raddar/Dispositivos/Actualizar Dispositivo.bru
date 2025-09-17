@@ -5,9 +5,13 @@ meta {
 }
 
 put {
-  url: {{url_backend}}/api/v1/device/updateDevice
+  url: {{url_backend}}/api/v1/device/updateDevice?id=10
   body: json
   auth: bearer
+}
+
+params:query {
+  id: 10
 }
 
 auth:bearer {
@@ -16,15 +20,17 @@ auth:bearer {
 
 body:json {
   {
-    "name_model": "",
-    "serial_model": "",
-    "status_model": "",
-    "contact_model": "",
-    "category_model": "",
+    "name_model": "Toyota Prado",
+    "serial_model": "11111",
+    "status_model": "active",
+    "contact_model": "sdsds",
+    "category_model": "auto",
+    "year_model": "2025",
+    //"ownerId": "",
     "attributes": [
       {
-        "deviceImage": "",
-        "brand_label": ""
+        "deviceImage": "ffff",
+        "brand_label": "XYZ-987"
       }
     ]
   }

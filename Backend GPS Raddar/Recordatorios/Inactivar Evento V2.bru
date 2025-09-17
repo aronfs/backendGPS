@@ -1,11 +1,11 @@
 meta {
-  name: Inactivar Evento
+  name: Inactivar Evento V2
   type: http
-  seq: 6
+  seq: 7
 }
 
-put {
-  url: {{url_backend}}/api/v1/evento/inactiveEvento?id
+patch {
+  url: {{url_backend}}api/v1/evento/inactiveEventoV2?id
   body: none
   auth: inherit
 }

@@ -1,11 +1,11 @@
 meta {
   name: Actualizar Evento
   type: http
-  seq: 4
+  seq: 5
 }
 
 put {
-  url: {{url_backend}}/api/v1/reportes/updateByIdEvento?id
+  url: {{url_backend}}/api/v1/evento/updateByIdEvento?id
   body: json
   auth: inherit
 }

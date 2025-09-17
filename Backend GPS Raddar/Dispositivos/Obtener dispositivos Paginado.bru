@@ -5,9 +5,18 @@ meta {
 }
 
 get {
-  url: {{url_backend
+  url: {{url_backend}}api/v1/device/getAllDevicesPaginated?page=1&limit=10
   body: none
-  auth: inherit
+  auth: bearer
+}
+
+params:query {
+  page: 1
+  limit: 10
+}
+
+auth:bearer {
+  token: {{Authorization}}
 }
 
 settings {

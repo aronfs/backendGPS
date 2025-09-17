@@ -1,11 +1,11 @@
 meta {
-  name: Obtener Resumen de Usuario
+  name: Activar Cuenta
   type: http
-  seq: 5
+  seq: 8
 }
 
-get {
-  url: {{url_backend}}api/v1/accounts/getDashboardAccount?email=mateosalazar7@gmail.com
+patch {
+  url: {{url_backend}}api/v1/accounts/activeAccount?email=mateosalazar7@gmail.com
   body: none
   auth: bearer
 }

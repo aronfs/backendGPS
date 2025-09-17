@@ -1,0 +1,24 @@
+meta {
+  name: Obtener Recordatorios Paginado
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{url_backend}}api/v1/evento/getEventPaginated
+  body: none
+  auth: bearer
+}
+
+headers {
+  page: 1
+  limit: 
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{url_backend}}api/v1/device/getAllDevicesPaginated?page=1&limit=10
+  url: {{url_backend}}/api/v1/device/getAllDevicesPaginated?page=1&limit=200
   body: none
   auth: bearer
 }
 
 params:query {
   page: 1
-  limit: 10
+  limit: 200
 }
 
 auth:bearer {

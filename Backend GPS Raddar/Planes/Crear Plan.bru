@@ -1,0 +1,28 @@
+meta {
+  name: Crear Plan
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url_backend}}api/v1/plan/createPlan
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:json {
+  { "name_plan": "Servicio Rastreo",
+      "price_plan": 25.0,
+      "number_vehicle": 5,
+      "duration_plan": "1 Mes",
+      "id_service": "68cc45b8dff5c82459af09f8"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

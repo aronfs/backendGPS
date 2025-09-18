@@ -1,17 +1,17 @@
 meta {
-  name: Inactivar Servicio
+  name: Inactivar Plan
   type: http
   seq: 5
 }
 
 patch {
-  url: {{url_backend}}api/v1/service/inactiveService?id=68cc36b5686e293c38043398
+  url: {{url_backend}}api/v1/plan/inactivePlan?id=68cc824e4ff81958b5f412b6
   body: none
   auth: bearer
 }
 
 params:query {
-  id: 68cc36b5686e293c38043398
+  id: 68cc824e4ff81958b5f412b6
 }
 
 auth:bearer {

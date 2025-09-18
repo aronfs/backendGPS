@@ -1,18 +1,17 @@
 meta {
-  name: Obtener Servicios Paginado
+  name: Obtener planes por id
   type: http
-  seq: 6
+  seq: 3
 }
 
 get {
-  url: {{url_backend}}api/v1/service/getAllServicePaginated?page=1&limit=10
+  url: {{url_backend}}api/v1/plan/getByIdPlan?id=68cc824e4ff81958b5f412b6
   body: none
   auth: bearer
 }
 
 params:query {
-  page: 1
-  limit: 10
+  id: 68cc824e4ff81958b5f412b6
 }
 
 auth:bearer {

@@ -1,0 +1,32 @@
+meta {
+  name: Actualizar Plan
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{url_backend}}api/v1/plan/updatePlan?id=68cc824e4ff81958b5f412b6
+  body: json
+  auth: bearer
+}
+
+params:query {
+  id: 68cc824e4ff81958b5f412b6
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:json {
+  { "name_plan": "Servicio Rastre2",
+      "price_plan": 25.0,
+      "number_vehicle": 5,
+      "duration_plan": "1 Mes",
+      "id_service": "68cc45b8dff5c82459af09f8"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

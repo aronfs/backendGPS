@@ -1,0 +1,24 @@
+meta {
+  name: Obtener Servicios Paginado
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{url_backend}}api/v1/service/getAllServicePaginated?page=1&limit=1
+  body: none
+  auth: bearer
+}
+
+params:query {
+  page: 1
+  limit: 1
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

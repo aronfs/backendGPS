@@ -16,14 +16,21 @@ auth:bearer {
 
 body:json {
   {
-     "name_service":  "Servicio Prueba",
-       "description_service": "descripcion prueba",
-       "address_service": "direccion",
-       "date_service": "2025-05-01",
-       "category_service": "lavado",
-       "latitude_service": -9.001231,
-       "longitude_service": 9.00012312
+    "name_service": "Servicio Prueba",
+    "description_service": "descripcion",
+    "address_service": "direccion prueba",
+    "attention_service": [
+      { "date": "lunes", "start_time": "09:00", "end_time": "18:00" },
+      { "date": "martes", "start_time": "09:00", "end_time": "18:00" },
+      { "date": "miércoles", "start_time": "09:00", "end_time": "18:00" },
+      { "date": "jueves", "start_time": "09:00", "end_time": "18:00" },
+      { "date": "viernes", "start_time": "09:00", "end_time": "18:00" }
+    ],
+    "category_service": "Lavado",
+    "latitude_service": "-9.001231",
+    "longitude_service": "99.002132"
   }
+  
 }
 
 settings {

@@ -1,0 +1,19 @@
+meta {
+  name: Enviar Correo de Recuperacion de Contraseña
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url_backend}}api/v1/recovery/generatePasswordKey?email=aronviracocha7@gmail.com
+  body: none
+  auth: inherit
+}
+
+params:query {
+  email: aronviracocha7@gmail.com
+}
+
+settings {
+  encodeUrl: true
+}

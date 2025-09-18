@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{url_backend}}api/v1/items/getItems
+  url: {{url_backend}}api/v1/items/createItems
   body: json
   auth: bearer
 }
@@ -16,8 +16,8 @@ auth:bearer {
 
 body:json {
   {
-    "type_item": "",
-    "icon_item": ""
+    "type_item": "categoria1",
+    "icon_item": "icon.png"
   }
 }
 

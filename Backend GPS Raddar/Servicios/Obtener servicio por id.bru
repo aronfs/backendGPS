@@ -1,0 +1,23 @@
+meta {
+  name: Obtener servicio por id
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{url_backend}}api/v1/service/getByIdService?id=68cc1a71f4c185d342b8b6b6
+  body: none
+  auth: bearer
+}
+
+params:query {
+  id: 68cc1a71f4c185d342b8b6b6
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

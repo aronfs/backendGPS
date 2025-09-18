@@ -1,0 +1,31 @@
+meta {
+  name: Crear Servicio
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url_backend}}api/v1/service/createService
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:json {
+  {
+     "name_service":  "Servicio Prueba",
+       "description_service": "descripcion prueba",
+       "address_service": "direccion",
+       "date_service": "2025-05-01",
+       "category_service": "lavado",
+       "latitude_service": -9.001231,
+       "longitude_service": 9.00012312
+  }
+}
+
+settings {
+  encodeUrl: true
+}

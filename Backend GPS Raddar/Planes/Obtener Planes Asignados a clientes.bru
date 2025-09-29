@@ -1,0 +1,19 @@
+meta {
+  name: Obtener Planes Asignados a clientes
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{url_backend}}/api/v1/plan/getAllAssignCustomerToPlan
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

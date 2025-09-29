@@ -1,0 +1,31 @@
+meta {
+  name: Asignar Plan a Cliente
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{url_backend}}/api/v1/plan/assigntCustomerToPlan
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:json {
+  {
+    "name": "Cccc",
+    "last_name": "Ccc",
+    "email": "cccc@cdvcf.com",
+    "phone": "123456789",
+    "plan": "Servicio Rastreo",
+    "status": "ASIGNADO"
+    //"assignTo": ""
+  }
+}
+
+settings {
+  encodeUrl: true
+}

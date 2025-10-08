@@ -1,11 +1,11 @@
 meta {
-  name: Registrar un Dispositivo
+  name: Registrar Dispositivo SQL
   type: http
-  seq: 1
+  seq: 2
 }
 
 post {
-  url: {{url_backend}}/api/v1/device/registerDevice
+  url: {{url_backend}}/api/v1/deviceSQL/registeDeviceSQL
   body: json
   auth: bearer
 }
@@ -17,12 +17,10 @@ auth:bearer {
 body:json {
   {
   "name_model": "MODELO-SMARTPHONE",
-        "serial_model": "112233499",
-        "status_model": "offline",
-        "contact_model": "N/A",
-        "category_model": "Car",
-    //"year_model": "2025",
-    //"ownerId": "",
+  "serial_model": "33345",
+  "status_model": "online",
+  "contact_model": "222-333",
+  "category_model": "Car",
     "attributes": [
       {
         "deviceImage": "ffff",

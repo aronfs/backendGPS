@@ -5,13 +5,13 @@ meta {
 }
 
 patch {
-  url: {{url_backend}}/api/v1/accounts/activateFCMAccount?isactivate=true
+  url: {{url_backend}}/api/v1/accounts/activateFCMAccount?isactivate=false
   body: none
   auth: bearer
 }
 
 params:query {
-  isactivate: true
+  isactivate: false
 }
 
 auth:bearer {

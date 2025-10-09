@@ -1,0 +1,23 @@
+meta {
+  name: Activar FCM
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{url_backend}}/api/v1/accounts/activateFCMAccount?isactivate=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  isactivate: true
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

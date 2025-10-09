@@ -1,13 +1,17 @@
 meta {
-  name: Estado Firebase 
+  name: Estado Firebase
   type: http
   seq: 6
 }
 
 get {
-  url: {{url_backend}}
+  url: {{url_backend}}/api/v1/accounts/statusFCM
   body: none
-  auth: inherit
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
 }
 
 settings {
